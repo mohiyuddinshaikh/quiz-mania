@@ -13,7 +13,7 @@ export const routes = [
         element: <Homepage />,
       },
       {
-        path: "quiz",
+        path: "quiz/:id",
         element: <Quiz />,
       },
       {

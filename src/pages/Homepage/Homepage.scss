@@ -1,0 +1,42 @@
+.instruction-dialog {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #111827;
+}
+
+.block {
+  margin-bottom: 18px;
+}
+
+.block h4 {
+  background: #f5f6ec;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.block ul {
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.block li {
+  margin-bottom: 6px;
+}
+
+.nested {
+  margin-top: 6px;
+  padding-left: 18px;
+}
+
+.quizRules {
+  color: orangered;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.quizRules:hover {
+  text-decoration: underline;
+}
