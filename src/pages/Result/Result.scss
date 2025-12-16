@@ -1,0 +1,209 @@
+.result_container {
+  min-height: 100vh;
+  background: #f6f5ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: #2d2b4e;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+
+.status-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  &.success {
+    background: #dff3e4;
+    color: #16a34a;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 20px;
+  margin-bottom: 10px;
+}
+
+.spaced {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b4a6a;
+  margin-bottom: 32px;
+}
+
+.score {
+  margin: 24px 0;
+
+  .label {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .value {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .great-job {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &.success .value {
+    color: #16a34a;
+  }
+
+  &.fail {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #e4a5b7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .value {
+      color: #b59b00;
+    }
+  }
+}
+
+.summary-card {
+  background: #f9f8f1;
+  border: 1px solid #e5e3d6;
+  border-radius: 10px;
+  padding: 20px 28px;
+  margin-top: 24px;
+}
+
+.summary-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.summary-row {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+
+  .correct {
+    color: #16a34a;
+    font-weight: 800;
+  }
+
+  .incorrect {
+    color: #dc2626;
+    font-weight: 800;
+  }
+
+  .skipped {
+    color: #8b0000;
+    font-weight: 800;
+  }
+
+  .labels {
+    color: black;
+    font-weight: 400;
+  }
+}
+
+.retake {
+  margin-top: 40px;
+  padding: 10px 28px;
+  border: 1.5px solid #d24c73;
+  background: transparent;
+  color: #d24c73;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #d24c73;
+    color: white;
+  }
+}
+
+@media (max-width: 640px) {
+  .result_container {
+    padding: 24px 16px;
+  }
+
+  .status-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+    letter-spacing: 8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .score {
+    margin: 16px 0;
+
+    .label {
+      font-size: 16px;
+    }
+
+    .value {
+      font-size: 36px;
+    }
+
+    .great-job {
+      font-size: 20px;
+    }
+
+    &.fail {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .summary-card {
+    padding: 16px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .summary-title {
+    font-size: 14px;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .retake {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 240px;
+    padding: 10px;
+    font-size: 13px;
+  }
+}

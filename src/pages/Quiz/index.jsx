@@ -86,7 +86,7 @@ export default function Quiz() {
       <div className="quizStatusBar">
         <div className="top">
           <div className="currentQuestion">
-            {currentQuestion + 1}/{questions?.length}
+            {currentQuestion + 1} <span> /{questions.length}</span>
           </div>
           <div className="timer">{timeLeft}s</div>
         </div>
@@ -98,7 +98,7 @@ export default function Quiz() {
         </div>
       </div>
       <div className="question">
-        {currentQuestion + 1} <span>{question}</span>
+        {currentQuestion + 1}. <span>{question}</span>
       </div>
       <div className="options">
         {options.map((option) => (
@@ -119,11 +119,19 @@ export default function Quiz() {
 
       <div className="ctas">
         {currentQuestion === questions?.length - 1 ? (
-          <button className="next" onClick={handleFinish}>
+          <button
+            className="next"
+            onClick={handleFinish}
+            disabled={!selectedOption}
+          >
             Finish
           </button>
         ) : (
-          <button className="next" onClick={handleNext}>
+          <button
+            className="next"
+            onClick={handleNext}
+            disabled={!selectedOption}
+          >
             Next
           </button>
         )}

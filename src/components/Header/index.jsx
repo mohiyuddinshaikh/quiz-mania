@@ -16,7 +16,8 @@ export default function Header() {
   return (
     <header className="app-header">
       <div className="left" onClick={handleExit}>
-        QuizMania
+        <span className="one">QUIZ</span>
+        <span className="two">Mania</span>
       </div>
 
       <div className="right">
@@ -26,7 +27,12 @@ export default function Header() {
           </button>
         )}
 
-        {path === "/result" && <span className="user-name">{userName}</span>}
+        {path === "/result" && (
+          <div className="user-block">
+            <div className="avatar">{userName?.charAt(0).toUpperCase()}</div>
+            <span className="user-name">{userName}</span>
+          </div>
+        )}
       </div>
     </header>
   );
