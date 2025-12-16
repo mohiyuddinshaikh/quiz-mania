@@ -1,16 +1,50 @@
-# React + Vite
+# QuizMania 🎯
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuizMania is an interactive quiz platform where users can choose a topic, enter their name, and attempt a timed quiz. Each question is time-bound, and results are displayed at the end with a detailed breakdown of performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Setup & Installation
 
-## React Compiler
+Follow the steps below to run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone <repository-url>
+cd quiz-mania
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## 🧩 Problem Statement
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of this project is to build a quiz platform with the following behavior:
+
+- Users can select a quiz topic and enter their name to start the quiz.
+- Each question has a time limit (10 seconds in the current implementation, but configurable per question).
+- Users can:
+  - Select an option and press **Next** to submit an answer.
+  - Skip a question by pressing **Next** without selecting any option.
+- Users **cannot**:
+  - Jump between questions.
+  - Revisit or reattempt previous questions.
+- If a question is not answered within the given time limit, it is automatically skipped.
+- An answer is considered **valid only when** an option is selected **and** the **Next** button is pressed.
+- After the quiz is completed:
+  - Users see the total count of **correct**, **incorrect**, and **unanswered** questions.
+  - The final score percentage is displayed.
+- Users can restart the quiz from the results screen.
+
+---
+
+## ✅ Completed Features
+
+- User form to collect basic details before starting the quiz
+  - Includes proper validation and error messages
+- Fully implemented quiz flow as described in the problem statement
+- Timed questions with automatic skipping on timeout
+- Result summary with performance breakdown and percentage
+- UI implemented as per Figma designs (desktop)
+- Responsive design (approximately 60% complete)
+
+---
+
